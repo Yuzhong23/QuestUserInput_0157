@@ -10,6 +10,9 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
     var textJK by remember { mutableStateOf("") }
     val gender: List<String> = listOf("Laki-Laki", "Perempuan")
 
+    // variabel-variabel untuk menyimpan data yang diperoleh dari komponen UI
+    var nama by remember { mutableStateOf("") }
+
     Column(
         modifier = modifier.padding(top = 50.dp),
         verticalArrangement = Arrangement.Top,
