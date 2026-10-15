@@ -55,17 +55,21 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
                 textNama = it
             }
         )
-        Row{
+        Row {
             gender.forEach { item ->
-                Row(modifier = Modifier.selectable(
-                    selected = textJK == item,
-                    onClick = {textJK = item}
-                ), verticalAligment = Alignment.CenterVertically) {
+                Row(
+                    modifier = Modifier.selectable(
+                        selected = textJK == item,
+                        onClick = { textJK = item }
+                    ),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
                     RadioButton(
-                        seleted = textJK == item,
+                        selected = textJK == item,
                         onClick = {
-                            textJk = item
-                        })
+                            textJK = item
+                        }
+                    )
                     Text(item)
                 }
             }
@@ -91,7 +95,7 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
         )
         Button(
             modifier = Modifier.fillMaxWidth(fraction = 1f),
-            // 
+            //
             enabled = textAlamat.isNotEmpty(),
             onClict = {
                 nama=textNama
